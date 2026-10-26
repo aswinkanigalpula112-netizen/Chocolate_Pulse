@@ -1,24 +1,79 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chocolate_Pulse</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chocolate Pulse | Discover Images</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-  <h1>ChocolatePulse</h1>
-  <form id="search-form">
-    <input id="search-input" type="search" placeholder="Search images..." />
-    <button type="submit">Search</button>
-  </form>
-</header>
 
-<main>
-  <p id="status"></p>
-  <section id="results"></section>
-</main>
+  <header class="site-header">
+    <a href="#" class="brand">Chocolate Pulse<span>.</span></a>
+    <p class="tagline">A little inspiration in every pixel.</p>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">YOUR VISUAL DISCOVERY SPACE</p>
+      <h1>Find your next <span>inspiration.</span></h1>
+      <p class="intro">
+        Explore ideas, discover new places, and collect visual inspiration.
+      </p>
+    </section>
+
+    <section class="search-section" aria-label="Image search">
+      <form id="search-form" class="search-form">
+        <label for="search-input">What would you like to discover?</label>
+
+        <div class="search-row">
+          <input
+            type="search"
+            id="search-input"
+            name="search"
+            placeholder="Try nature, cities, or animals..."
+            aria-label="Search images"
+          >
+
+          <button type="submit" id="search-button">
+            Search <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </form>
+
+      <div class="quick-picks">
+        <p>NEED AN IDEA?</p>
+        <div class="chip-row" aria-label="Suggested categories">
+          <button type="button" class="chip">Nature</button>
+          <button type="button" class="chip">Cities</button>
+          <button type="button" class="chip">Animals</button>
+        </div>
+      </div>
+
+      <div class="results-heading">
+        <h2>Explore the collection</h2>
+        <button type="button" id="clear-button">Clear search ×</button>
+      </div>
+
+      <p id="empty-state" class="empty-state">
+        <span class="empty-icon" aria-hidden="true">✳</span>
+        <strong>Your next discovery starts here.</strong>
+        Search for something you love to see your results.
+      </p>
+
+      <div
+        id="results-container"
+        class="results-grid"
+        aria-label="Image search results"
+      ></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Chocolate Pulse · A fresh perspective, one search at a time.</p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
