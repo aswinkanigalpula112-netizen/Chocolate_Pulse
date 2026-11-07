@@ -269,3 +269,49 @@ h1 span {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 }
+
+
+.image-card {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgb(73 41 31 / 7%);
+}
+
+.image-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.image-card-link:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+}
+
+.image-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--accent-light);
+}
+
+.image-card-copy {
+  padding: 13px 15px 15px;
+}
+
+.image-card-title {
+  margin: 0;
+  color: var(--chocolate);
+  font-size: 0.98rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.image-card-license {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
